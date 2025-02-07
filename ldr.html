@@ -41,9 +41,7 @@
         <div class="else">
             <textarea type="text" placeholder="hukum kero mera aka" name="choice"></textarea>
             <li>
-                <button type="submit" name="submit">
-                    <a href="https://wa.me/9883077675?text=done" target="done">Submit</a>
-                </button>    
+                <button type="submit" name="submit">Submit</button>
             </li>
         </div>
     </form>
@@ -55,10 +53,30 @@
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-            .catch(error => console.error('Error!', error.message))
+          .then(response => {
+            if (response.ok) {
+                window.open('https://wa.me/9883077675?text=done', '_blank'); // Redirect to WhatsApp
+            } else {
+                console.error('Error submitting form:', response.statusText);
+            }
         })
-      // </script>
+        .catch(error => console.error('Error:', error));
+        })
+       </script>
+
+       <script>
+        document.getElementById('textForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            const formData = new FormData(this); // Create a FormData object
+    
+            fetch('your_form_handler.php', { // Send data to your PHP handler
+                method: 'POST',
+                body: formData
+            })
+            
+        });
+    </script>
 
 </body>
 </html>
