@@ -114,12 +114,7 @@ body
     cursor: pointer;
 }
 
-.menue1
-{
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-}
+
 
 .else textarea
 {
