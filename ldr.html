@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Distance Date</title>
+    <link rel="stylesheet" href="ldr.css">
+</head>
+<body>
+    <form class="container" method="post" name="google-sheet">
+        <div>
+
+            <div class="tenor-gif-embed" data-postid="9549944080492184399" data-share-method="host" data-aspect-ratio="1" data-width="300%">
+                <a href="https://tenor.com/view/foodbyjag-jagyasini-singh-chowmein-chowmin-noodles-gif-9549944080492184399">
+                    Foodbyjag Jagyasini Singh Sticker
+                </a>from 
+                <a href="https://tenor.com/search/foodbyjag-stickers">
+                    Foodbyjag Stickers
+                </a>
+            </div> 
+            <script type="text/javascript" async src="https://tenor.com/embed.js">
+            </script>
+        </div>
+
+
+        <div>
+            <div class="tenor-gif-embed" data-postid="21010063" data-share-method="host" data-aspect-ratio="1" data-width="300%"><a href="https://tenor.com/view/coffee-gif-21010063">Coffee GIF</a>from <a href="https://tenor.com/search/coffee-gifs">Coffee GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+
+        <div>
+            <div class="tenor-gif-embed" data-postid="16969279" data-share-method="host" data-aspect-ratio="1" data-width="300%"><a href="https://tenor.com/view/mokos-mokospinceszet-winery-wine-hungarianwine-gif-16969279">Mokos Mokospinceszet Sticker</a>from <a href="https://tenor.com/search/mokos-stickers">Mokos Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+        <div>
+            <div class="tenor-gif-embed" data-postid="13567723" data-share-method="host" data-aspect-ratio="1.25743" data-width="300%"><a href="https://tenor.com/view/dinner-spaghetti-dinner-spaghetti-and-meatballs-spaghetti-sticker-gif-13567723">Dinner Spaghetti Dinner Sticker</a>from <a href="https://tenor.com/search/dinner-stickers">Dinner Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+
+
+
+        <h4>Or Something else You Want..🧐....<br>
+        if soo...... whatever you preffer please telll mee....🥺.......</h4>
+        <div class="else">
+            <textarea type="text" placeholder="hukum kero mera aka" name="choice"></textarea>
+            <li>
+                <button type="submit" name="submit">
+                    <a href="https://wa.me/9883077675?text=done" target="done">Submit</a>
+                </button>    
+            </li>
+        </div>
+    </form>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyhIAVIXr8pCVC5Dw0thwnc3fvBUEvINEOK4_CMfhxwWHeoKpJpoLFJQtwODIzuMPCL/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+            .catch(error => console.error('Error!', error.message))
+        })
+      // </script>
+
+</body>
+</html>
